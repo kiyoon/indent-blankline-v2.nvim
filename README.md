@@ -1,13 +1,19 @@
 # Indent Blankline
 
+> [!NOTE]
+> This is a fork of [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim).  
+> The original plugin introduced a new version (v3) with behaviour changes.
+> TL;DR - v2 scope is just "same indent level" while v3 uses an actual [semantic scope][scope] specific to each language.
+> This fork maintains the v2 version with nvim-treesitter `main` branch compatibility.
+
+[scope]: https://en.wikipedia.org/wiki/Scope_(computer_science)
+
 This plugin adds indentation guides to all lines (including empty lines).
 
 It uses Neovim's virtual text feature and **no conceal**
 
-This plugin requires Neovim 0.5 or higher. It makes use of Neovim only
+This plugin requires Neovim 0.10 or higher. It makes use of Neovim only
 features so it will not work in Vim.
-There is a legacy version of the plugin that supports Neovim 0.4 under the
-branch `version-1`
 
 ## Install
 
@@ -16,19 +22,7 @@ Use your favourite plugin manager to install.
 For [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
-{ "lukas-reineke/indent-blankline.nvim" },
-```
-
-For [packer.nvim](https://github.com/wbthomason/packer.nvim):
-
-```lua
-use "lukas-reineke/indent-blankline.nvim"
-```
-
-For [vim-plug](https://github.com/junegunn/vim-plug):
-
-```vim
-Plug 'lukas-reineke/indent-blankline.nvim'
+{ "kiyoon/indent-blankline-v2.nvim" },
 ```
 
 ## Setup

@@ -21,10 +21,8 @@ This plugin adds indentation guides to all lines (including empty lines).
 
 It uses Neovim's virtual text feature and **no conceal**
 
-This plugin requires Neovim 0.5 or higher. It makes use of Neovim only
+This plugin requires Neovim 0.10 or higher. It makes use of Neovim only
 features so it will not work in Vim.
-There is a legacy version of the plugin that supports Neovim 0.4 under the
-branch `version-1`
 
 ==============================================================================
  2. HIGHLIGHTS                                   *indent-blankline-highlights*
@@ -463,9 +461,6 @@ g:indent_blankline_show_current_context *g:indent_blankline_show_current_context
     When on, use treesitter to determine the current context. Then show the
     indent character in a different highlight.
 
-    Note: Requires https://github.com/nvim-treesitter/nvim-treesitter to be
-          installed
-
     Note: With this option enabled, the plugin refreshes on |CursorMoved|,
           which might be slower
 
@@ -481,9 +476,6 @@ g:indent_blankline_show_current_context_start *g:indent_blankline_show_current_c
     Applies the |hl-IndentBlanklineContextStart| highlight group to the first
     line of the current context.
     By default this will underline.
-
-    Note: Requires https://github.com/nvim-treesitter/nvim-treesitter to be
-          installed
 
     Note: You need to have set |gui-colors| and it depends on your terminal
           emulator if this works as expected.
