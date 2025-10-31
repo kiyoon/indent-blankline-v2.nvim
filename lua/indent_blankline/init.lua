@@ -458,7 +458,7 @@ local refresh = function(scroll)
             utils.clear_line_indent(bufnr, i + offset)
         else
             local async
-            async = vim.loop.new_async(function()
+            async = vim.uv.new_async(function()
                 local blankline = lines[i]:len() == 0
                 local whitespace = string.match(lines[i], "^%s+") or ""
                 local only_whitespace = whitespace == lines[i]
